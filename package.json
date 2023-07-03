@@ -30,7 +30,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "start": "ts-node './lib/xlsx/test/xmlTool.test.ts"
+    "start": "ts-node './lib/xlsx/test/xmlTool.test.ts",
+    "build": "tsc --project tsconfig.json"
   },
   "dependencies": {
     "jszip": "^3.10.1",

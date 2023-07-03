@@ -36,7 +36,7 @@ export class ChartTool {
     }
 
     public buildChart = (readChart: any, opt: IData | IPPTChartData, sheetName: string) => {
-        sheetName = `'${sheetName}'`;
+        sheetName = `'${opt?.dataSheetName || sheetName}'`;
         readChart['c:chartSpace']['c:chart']['c:title']['c:tx']['c:rich']['a:p']['a:r']['a:t'] = opt.title.name;
         if (opt.title.color) {
             readChart['c:chartSpace']['c:chart']['c:title']['c:tx']['c:rich']['a:p']['a:r']['a:rPr']['a:solidFill']['a:srgbClr'].$.val = opt.title.color

@@ -13,6 +13,7 @@ export interface IData {
         shape?: string;
     };
     lineWidth?: number;
+    dataSheetName?: string;
 }
 export interface IPPTChartData {
     type: 'line' | 'bar';
@@ -36,6 +37,7 @@ export interface IPPTChartData {
         cx?: string;
         cy?: string;
     };
+    dataSheetName?: string;
 }
 export interface IPPTChartDataVal {
     labels: string[];

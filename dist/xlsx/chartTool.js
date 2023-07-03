@@ -40,7 +40,7 @@ class ChartTool {
         };
         this.buildChart = (readChart, opt, sheetName) => {
             var _a, _b;
-            sheetName = `'${sheetName}'`;
+            sheetName = `'${(opt === null || opt === void 0 ? void 0 : opt.dataSheetName) || sheetName}'`;
             readChart['c:chartSpace']['c:chart']['c:title']['c:tx']['c:rich']['a:p']['a:r']['a:t'] = opt.title.name;
             if (opt.title.color) {
                 readChart['c:chartSpace']['c:chart']['c:title']['c:tx']['c:rich']['a:p']['a:r']['a:rPr']['a:solidFill']['a:srgbClr'].$.val = opt.title.color;
